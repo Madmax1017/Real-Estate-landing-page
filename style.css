@@ -1,0 +1,691 @@
+*{margin :0%;
+padding:0%;
+box-sizing: border-box;}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.has-scroll-smooth #main {
+    overflow: hidden;
+}
+#main{
+    position: relative;
+    overflow: hidden;
+    background-color: #0a3cce;
+}
+@font-face {
+    font-family: a;
+    src: url(./assets/jost-variable.ttf);
+}
+@font-face {
+    font-family: b;
+    src: url(./assets/KFOlCnqEu92Fr1MmEU9fBBc4\ \(1\).ttf);
+}
+@font-face {
+    font-family: c;
+    src: url(./assets/KFOmCnqEu92Fr1Mu4mxK\ \(1\).ttf);
+}
+#page1{
+    height: 100vh;
+    width: 100vw;
+    background-color: #0b48ed;
+    position: relative;
+}
+#page1 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page1 nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    padding: 0px 30px;
+    background: transparent;
+    position: absolute;
+    
+}
+
+#page1>nav>img{
+    margin-top: -1.7vw;
+    width: 9%;
+}
+.icon {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #0b48ed;
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    
+   
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    outline: none;
+}
+
+.icon:hover {
+    border-color: #fff; /* Brighten the border */
+    transform: translateY(-2px);
+    
+    
+    box-shadow: 
+        inset 0 0 10px rgba(255, 255, 255, 0.2), 
+        0 0 5px rgba(255, 255, 255, 0.5), 
+        0 0 20px rgba(11, 72, 237, 0.6);
+}
+.cta {
+    display: inline-block; /* Ensures padding and transform work correctly */
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: 2px solid #fff; /* Matches the 'filling' color */
+    background-color: #0b48ed; /* Initial background color */
+    color: white; /* Initial text color */
+    font-size: 15px;
+    cursor: pointer;
+    font-family: b;
+    text-decoration: none;
+    
+    /* Your existing logic */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.cta::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%; /* Hidden below */
+    height: 100%;
+    width: 100%;
+    background-color: #fff; /* The "liquid" color */
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.cta:hover {
+    color: #0b48ed; /* Text changes to blue so it's visible on white */
+    transform: translateY(-2px);
+}
+
+.cta:hover::after {
+    top: 0; /* Slides up to fill */
+}
+.bottom-page1{
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    height: 35vh;
+    width: 50vw;
+  
+
+}
+ .bottom-page1 h1{
+  font-family: a;
+ font-size: 5vw;
+ font-weight: 100;
+ line-height: 1;
+ color: #fff;
+ }
+
+ .bottom-page1-inner{
+    position: absolute;
+    font-family: a;
+    height: 35%;
+    width: 80%;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+ }
+
+ .btn2 {
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: none; /* Added a border so the shape is visible */
+    background-color: white;
+    color: blue;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth text color change */
+    position: relative; /* Necessary for the pseudo-element to align */
+    overflow: hidden; /* Clips the blue layer when it's "outside" */
+    z-index: 1; /* Keeps the button on top */
+}
+
+.btn2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%; /* Starts completely below the button */
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: all 0.3s ease;
+    z-index: -1; /* Sits behind the text, but inside the button */
+}
+
+.btn2:hover {
+    color: white; /* Text turns white as the blue rises */
+    transform: translateY(-2px);
+}
+
+.btn2:hover::after {
+    top: 0; /* Slides the blue layer up to fill the button */
+}
+ 
+ .bottom-page1-inner>h4{
+    font-size: 1vw;
+    font-weight: 100;
+    color: #fff;
+ }
+
+ #page2{
+    display: flex;
+    align-items: start;
+    font-family: a;
+    justify-content: center;
+    flex-direction: column;
+   height: 100vh;
+   width: 100vw;
+   background-color: #0a3cce ; 
+   position: relative;
+   overflow: hidden;
+   padding: 0vw 8vw;
+   color: #fff;
+ }
+ #page2>h2{
+    font-weight: 100;
+    margin-bottom: 3vw;
+    
+ }
+ #page2>h1{
+    width: 90%;
+    font-size: 4vw;
+    font-weight: 100;
+    line-height: 1.3;
+    color: #dadada69;
+ }
+
+ #page3{
+position: relative;
+height: 100vh;
+width: 100vw;
+background-color:#0a3cce;
+
+
+ }
+
+ #page3>canvas{
+    max-height: 100vh;
+    max-width: 100vw;
+    position: relative;
+ }
+ #page4{
+    display: flex;
+    align-items: start;
+    font-family: a;
+    justify-content: center;
+    flex-direction: column;
+   height: 100vh;
+   width: 100vw;
+   background-color: #0a3cce ; 
+   position: relative;
+   overflow: hidden;
+   padding: 0vw 8vw;
+   color: #fff;
+   z-index: 10;
+ }
+ #page4>h2{
+    font-weight: 100;
+    font-size: 3vh;
+    margin-bottom: 3vw;
+    
+ }
+ #page4>h1{
+    width: 90%;
+    font-size: 4vw;
+    font-weight: 100;
+    line-height: 1.3;
+    color: #dadada69;
+ }
+
+ #page5 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+ #page5 canvas {
+    display: block;
+    width: 100vw;   
+    height: 100vh;   
+    object-fit: cover; 
+    will-change: transform; 
+    transform: translateZ(0); 
+    backface-visibility: hidden;
+}
+
+#page6{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0a3cce;
+    font-family: a;
+    color:#fff ;
+}
+#page6 h3{
+    margin-left: 15vw;
+    margin-bottom: 2vw;
+    font-weight: 100;
+   
+}
+#page6>h1 {
+    margin-left: 15vw;
+    font-weight: 100;
+    font-size: 3.2rem;
+    width: 70vw;
+    color: rgba(255, 255, 255, 0.2); /* Make it dim initially */
+}
+
+#page7{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0a3cce;
+}
+#page6>canvas{
+    position: relative;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.page7-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vw ;
+    width:30vw ;
+    left: 50%;
+    top:50%;
+  transform: translate(-50%,-50%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 9;
+    border: 1px solid white;
+}
+.page7-cir-inner{
+    height: 70%;
+    width: 70%;
+    z-index: 9;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: transparent;
+}
+#page8{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color:  #0a3cce;
+}
+#page8 video{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.page8-bottom{
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform:translateX(-50%) ;
+}
+
+.page8-bottom h1{
+    color: #fff;
+    font-family: a;
+    margin-bottom: 2vw;
+    font-size: 5vw;
+    font-weight: 100;
+}
+
+#page9{
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0a3cce;
+}
+
+.left9{
+    height: 100%;
+    width: 40%;
+  
+    position: relative;
+}
+.left9 h1{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    left: 35%;
+    transform: translateY(-50%);
+    font-size: 7vw;
+    color: #fff;
+    font-weight: 100;
+    font-family: a;
+    line-height: 1;
+}
+.right9{
+    height: 100%;
+    width: 60%;
+
+    position: relative;
+}
+.right9-center{
+    height: 65%;
+    width: 85%;
+    border-radius: 10px;
+    position: absolute;
+    top :50%;
+    transform: translateY(-50%);
+    background-image: url(/assets/magma.wp2.cubdev.com-home-1.jpeg);
+    background-size: cover;
+    left: 5%;
+}
+
+#page10 {
+    position: relative;
+    min-height: 100vh; /* Changed to min-height for content safety */
+    width: 100vw;
+    background-color: #0a3cce;
+    display: flex; /* Using Flexbox instead of relative positioning */
+    justify-content: flex-end; /* Pushes content to the right */
+    overflow-x: hidden;
+}
+
+.right10 {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 5%; /* Adds a little breathing room on the edge */
+}
+
+.right10-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 33.3vh; /* Ensures it takes up 1/3 of the height but can grow */
+    font-family: a; /* Changed 'a' to a generic for demo */
+    color: #fff;
+    padding: 2vw 0;
+}
+
+.right10-inner h1 {
+    font-size: clamp(1.2rem, 2vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.right10-inner p {
+    font-size: clamp(0.9rem, 1.1vw, 1.4rem);
+    width: 90%;
+    line-height: 1.6; /* Better readability for lists */
+    margin: 0;
+}
+
+
+#page11 {
+    height: 100%;
+    width: 100%;
+    padding: 5vw 10vw; /* Gives the page that breathable margin */
+    background-color: #fff;
+    font-family: a;
+}
+
+#page11 .main-heading {
+    font-size: 8vw; /* Large "Magma" style heading */
+    font-weight: 400;
+    margin-bottom: 5vw;
+    letter-spacing: -0.3vw;
+}
+
+.page11-blog {
+    display: flex;
+    align-items: flex-start; /* Keeps text at the top of the image level */
+    gap: 4vw;
+    width: 100%;
+    margin-bottom: 6vw; /* Spacing between rows */
+}
+
+.left11 {
+    height: 100;
+    width: 60%;
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.left11 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), filter 0.6s ease;
+}
+.page11-blog:hover .left11 img {
+    transform: scale(1.1); /* Zooms in by 10% */
+    filter: brightness(0.8); /* Slightly dims to make the white text pop */
+}
+.right11 {
+    width: 50%;
+    padding-top: 1vw;
+}
+
+.right11 h4 {
+    font-size: 1.1vw;
+    color: #888;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1.5vw;
+}
+
+.right11 h1 {
+    font-size: 2.2vw;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #333;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 600px) {
+    .page11-blog {
+        flex-direction: column;
+    }
+    .left11, .right11 {
+        width: 100%;
+    }
+    #page11 .main-heading {
+        font-size: 15vw;
+    }
+}
+ #page12{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #02268e;
+ }
+
+ .right12 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    position: absolute;
+    gap: 8vh;
+    height: 50%;
+    width: 70%;
+    top: 20%;
+    left: 50%;
+    
+    color: #fff;
+    font-family: a;
+ }
+
+ .right12 h1{
+    font-weight: 320;
+    font-size: 6rem;
+    line-height: 100%;
+    letter-spacing: -.04em;
+ }
+
+ .right12 h2{
+ 
+    margin: 0 0 10rem;
+    font-style: normal;
+    font-weight: 320;
+    font-size: 1.8rem;
+    line-height: 150%;
+    letter-spacing: -.02em;
+    color: rgba(255, 255, 255, .8);
+}
+  #page13{
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+    background-color: #000;
+    padding: 10vh 15vh;
+  }
+
+  #page13 h1{
+    position: relative;
+    margin: 0 0 3rem;
+    color: #fff;
+    font-style: normal;
+    font-family: a;
+    font-weight: 120;
+    font-size: 5.5rem;
+    line-height: 100%;
+    letter-spacing: -.04rem;
+}
+  
+
+  #page13 button{
+    padding: 3vh 6vh;
+    color: #fff;
+    background-color: #0a3cce;
+    border-radius: 50px;
+    border: none;
+    font-size: 2vh;
+    letter-spacing: 1;
+  }
+  .marquee {
+    width: 100%;
+    background-color: #02268e; /* Dark background to match the white logos */
+    overflow: hidden;
+    padding: 60px 0;
+    display: flex;
+  
+  }
+  
+  .marquee-content {
+    display: flex;
+    width: max-content;
+    animation: scroll-logos 10s linear infinite;
+  }
+  
+  .logo-group {
+    display: flex;
+    align-items: center;
+    gap: 100px; /* Space between each logo */
+    padding-right: 100px; /* Must match the gap exactly */
+  }
+  
+  .logo-group img {
+    height: 45px; /* Adjust height to keep them uniform */
+    width: auto;
+    opacity: 0.7; /* Gives that subtle greyish-white look */
+    transition: opacity 0.3s ease;
+  }
+  
+  .logo-group img:hover {
+    opacity: 1; /* Brightens on hover */
+  }
+  
+  @keyframes scroll-logos {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%); /* Moves exactly half the total width */
+    }
+  }
+
+  #page14{
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    background-color: #000;
+  }
+  .page14-inner{
+    position: relative;
+    border-top: 0.5px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 5vw;
+height: 33.3%;
+width: 100%;
+background-color: black;
+color: #ffffff;
+font-family: a;
+
+  }
+
+  .page14-inner i{
+    font-size: 2.4vw;
+    font-weight: 100;
+    position: relative;
+    z-index: 999999;
+  }
+  .page14-inner h1{
+    font-size: 3vw;
+    font-weight: 100;
+    position: relative;
+    z-index: 999999;
+  }
+.center-14{
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    background-color: #0a3cce;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all ease .5s;
+}
+
+.page14-inner:hover .center-14{
+    height: 100%;
+
+}
